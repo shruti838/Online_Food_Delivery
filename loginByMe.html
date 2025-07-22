@@ -1,0 +1,54 @@
+<?php
+	if(isset($_POST["loginbtn"]))
+	{
+		$email=$_POST["emailtxt"];
+		$password=$_POST["pswdtxt"];
+		
+		if($email=="admin@gmail.com" && $password=="admin123")
+		{
+			?>
+				<script>
+					window.location="home.php";
+				</script>
+			<?php
+		}
+		else
+		{
+			?>
+				<script>
+					alert("Invalid Username & Password");
+				</script>
+			<?php
+		}
+	}
+?>
+
+<html>
+<head>
+	<title>Online Food Delivery System</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+</head>
+<body>
+<div class="login-page">
+    <div class="login-main">  	
+    	 <div class="login-head">
+				<h1>Login</h1>
+			</div>
+			<div class="login-block">
+				<form action="#" method="POST">
+					<input type="text" name="emailtxt" placeholder="Email" required="">
+					<input type="password" name="pswdtxt" class="lock" placeholder="Password">
+					<input type="submit" name="loginbtn" value="Login">	
+						
+			<br>	
+				</form>
+
+			</div>
+      </div>
+</div>
+
+<div class="copyrights">
+	<p>© DEVELOPED AT AVPTI COLLEGE</p>
+</div>
+</body>
+</html>
